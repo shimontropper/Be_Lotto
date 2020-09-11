@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/stastisticsLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/statistics"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--    <View android:layout_weight="1" android:layout_height="match_parent" android:layout_width="match_parent"/>-->
+    <TableLayout
+
+    android:id="@+id/stastistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toBottomOf="@id/stastisticsLabel"> <!-- stretch the second column of the layout-->
+
+        <!-- first row of the table layout-->
+        <TableRow
+
+            android:id="@+id/firstRow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <!-- first element of the row-->
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/freqValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/frequencyValue" />
+
+            <TextView
+                android:id="@+id/digitFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/digitFrame" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/secondRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <!--            <DatePicker-->
+            <!--                android:id="@+id/datePicker1"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_centerHorizontal="true"-->
+            <!--                 />-->
+            <TextView
+                android:id="@+id/startDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/startDateHint"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/endtDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button1"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="right"
+                android:hint="@string/endDateHint"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:text="@string/dateInterval" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/thirdRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:clickable="true"
+                />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+
+                    android:id="@+id/radio_pirates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/rareLabel" />
+                <!--                    android:onClick="onRadioButtonClicked"-->
+
+                <RadioButton
+
+                    android:layout_weight="1"
+                    android:id="@+id/radio_ninjas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/commonLabel" />
+            </RadioGroup>
+<!--            <TextView-->
+<!--                android:id="@+id/empty"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                                 />-->
+            <TextView
+
+                android:id="@+id/freqeuncy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:clickable="true"
+                android:text="@string/frequencyLable" />
+        </TableRow>
+        <TableRow>
+            <SeekBar
+                android:id="@+id/resultsSizeBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/resultSizeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/frequencyValue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/resultSizeLabel" />
+        </TableRow>
+
+    </TableLayout>
+
+    <!--    <LinearLayout android:id="@+id/stastistics"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/stastisticsLabel"-->
+    <!--        android:layout_height="20dp"-->
+    <!--        android:layout_width="match_parent" android:orientation="horizontal">-->
+
+    <!--   -->
+    <!--    </LinearLayout>-->
+
+    <!--    app:layout_constraintRight_toRightOf="parent"-->
+    <!--    app:layout_constraintTop_toBottomOf="@+id/stastistics"-->
+    <!--    android:stretchColumns="3"-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="3"
+        app:layout_constraintTop_toBottomOf="@id/stastistics"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+       >
+        <!--        android:layout_marginTop="150dp"-->
+
+
+        <TableRow
+            android:background="#0079D6"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="UserId" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="User Name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Location" />
+        </TableRow>
+
+        <TableRow
+            android:background="#DAE8FC"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Suresh Dasari" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hyderabad" />
+        </TableRow>
+
+        <TableRow
+            android:background="#DAE8FC"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rohini Alavala" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Guntur" />
+        </TableRow>
+
+        <TableRow
+            android:background="#DAE8FC"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Trishika Dasari" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Guntur" />
+        </TableRow>
+    </TableLayout>
+    <!--&lt;!&ndash;            android:layout_width="409dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="409dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_height="710dp"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        tools:layout_editor_absoluteX="1dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:numColumns="2" />&ndash;&gt;-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

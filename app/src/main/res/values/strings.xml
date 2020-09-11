@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Lotto</string>
+    <string name="statistics">סטטיסטיקה:</string>
+    <string name="digitFrame">מספר ספרות:</string>
+    <string name="dateInterval">טווח תאריכים:</string>
+    <string name="startDateHint">תאריך התחלה</string>
+    <string name="endDateHint">תאריך אחרון</string>
+    <string name="frequencyValue">מספר</string>
+    <string name="frequencyLable">צפיפות:</string>
+    <string name="rareLabel">הכי נדיר</string>
+    <string name="commonLabel">הכי נפוץ</string>
+    <string name="resultSizeLabel">מספר תוצאות</string>
+</resources>
