@@ -36,19 +36,25 @@
             android:layout_weight="1">
 
             <!-- first element of the row-->
+            <EditText
+                android:gravity="center"
+                android:inputType="number"
+                android:id="@+id/freqValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3"
+                />
             <SeekBar
                 android:id="@+id/seekBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="10dp" />
+                android:padding="10dp"
+                />
 
-            <TextView
-                android:id="@+id/freqValue"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/frequencyValue" />
+
+<!--            android:hint="@string/frequencyValue"-->
 
             <TextView
                 android:id="@+id/digitFrame"
@@ -64,6 +70,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1">
+            <EditText android:layout_width="match_parent"  android:layout_height="match_parent" android:inputType="number" android:text="5" android:gravity="center"></EditText >
 
             <!--            <DatePicker-->
             <!--                android:id="@+id/datePicker1"-->
@@ -71,26 +78,30 @@
             <!--                android:layout_height="wrap_content"-->
             <!--                android:layout_centerHorizontal="true"-->
             <!--                 />-->
-            <TextView
-                android:id="@+id/startDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/button1"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:hint="@string/startDateHint"
-                android:textStyle="bold" />
+            <LinearLayout  android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/startDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/button1"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="@string/startDateHint"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/endtDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/button1"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:gravity="right"
-                android:hint="@string/endDateHint"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/endtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/button1"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:hint="@string/endDateHint"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView1"
@@ -106,12 +117,15 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             >
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 android:clickable="true"
+
                 />
+
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="wrap_content"
@@ -149,9 +163,19 @@
                 android:layout_height="wrap_content"
 
                 android:clickable="true"
-                android:text="@string/frequencyLable" />
+                android:text="@string/frequencyLebel" />
         </TableRow>
         <TableRow>
+
+
+            <EditText
+                android:inputType="number"
+                android:gravity="center"
+                android:id="@+id/resultSizeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10" />
             <SeekBar
                 android:id="@+id/resultsSizeBar"
                 android:layout_width="match_parent"
@@ -160,17 +184,13 @@
                 android:padding="10dp" />
 
             <TextView
-                android:id="@+id/resultSizeValue"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/frequencyValue" />
-
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/resultSizeLabel" />
+        </TableRow>
+        <TableRow>
+            <Button android:layout_weight="1" android:text="@string/showResultButton"></Button>
         </TableRow>
 
     </TableLayout>
