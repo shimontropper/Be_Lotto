@@ -13,10 +13,16 @@ class DependencyInjectorImpl:DependencyInjector {
     }
 
     override fun callAtrr(file: String,function:String, args: Array<String>): String {
-
         var python = Python.getInstance()
         val pythonFile = python.getModule(file)
-        val helloWorldString = pythonFile.callAttr(function,args)
-        return   (helloWorldString.toString())
+        var py_obj = pythonFile.callAttr("Lotto")
+        val result = py_obj.callAttr("run")//,args)
+        return result.toString()
+//        return   (helloWorldString.toString())
+//        return "help"
+//        var python = Python.getInstance()
+//        val pythonFile = python.getModule(file)
+//        val helloWorldString = pythonFile.callAttr(function,args)
+//        return   (helloWorldString.toString())
     }
 }

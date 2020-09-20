@@ -33,9 +33,9 @@ class MainActivity : AppCompatActivity(),MainContract.View {
 
         var python = Python.getInstance()
         val pythonFile = python.getModule("text")
-        val helloWorldString = pythonFile.callAttr("helloworld","be lotto")
-        helloWorldString.toString()
-        endDate.text = helloWorldString.toString()
+        var py_obj = pythonFile.callAttr("Lotto")
+        val data = py_obj.callAttr("run")//,args)
+        endDate.text = data.toString()
 
 
 

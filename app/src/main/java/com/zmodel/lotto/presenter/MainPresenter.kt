@@ -24,7 +24,7 @@ class MainPresenter(val view: MainContract.View,val dependencyInjector: Dependen
         )}
 //        "helloworld","shimon")
         var args:Array<String> = arrayOf("tropper")
-        val helloWorldString = dependencyInjector.callAtrr("text","helloworld", args = args)
+        val helloWorldString = dependencyInjector.callAtrr("text","run", args = args)
         endDate.text = helloWorldString.toString()
 
 //        var python = Python.getInstance()
